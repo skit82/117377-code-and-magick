@@ -186,13 +186,7 @@
   var wizardWidth = 70;
 
   var getFireballSpeed = function (left) {
-    if (left === true) {
-     var flyInWind = 5;
-      return flyInWind;
-    } else {
-      var againWind = 2;
-      return againWind;
-    }
+    return left ? 5 : 2;
   }
 
   var getWizardHeight = function () {
@@ -201,15 +195,11 @@
   }
 
   var getWizardX = function (width) {
-    var gameFieldWidht = width,
-    wizardX = gameFieldWidht / 2 - wizardWidth / 2;
-    return wizardX;
+    return gameFieldWidht / 2 - wizardWidth / 2;
   }
 
   var getWizardY = function (height) {
-    var gameFieldHeight = height,
-    wizardY = gameFieldHeight / 3 - getWizardHeight ();
-    return wizardY;
+    return gameFieldHeight / 3 - getWizardHeight ();
   }
 </script>
 <script src="js/game.js"></script>
